@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Rectangular {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("점1을 입력하세요.");
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		System.out.println("점2를 입력하세요.");
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+
+		if (x1==x2 || y1==y2)
+			System.out.println("직사각형이 아닙니다.");
+		else {
+			double length = (Math.abs(x1-x2)+Math.abs(y1-y2))*2;
+			double area = Math.abs(x1-x2)*Math.abs(y1-y2);
+
+			System.out.printf("둘레: %.1f\n넓이: %.1f",length,area);
+		}
+	}
+}
